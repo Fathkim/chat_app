@@ -157,15 +157,19 @@ class MessageBubble extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
       child: Column(
         crossAxisAlignment:
         isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
         children: [
-          Text(
-            sender,
-            style: const TextStyle(color: Colors.black54, fontSize: 12.0),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 5.0),
+            child: Text(
+              sender,
+              style: const TextStyle(color: Colors.black54, fontSize: 12.0),
+            ),
           ),
+
           Material(
             borderRadius: BorderRadius.only(
                 topLeft:
